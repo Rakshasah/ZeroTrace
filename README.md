@@ -70,3 +70,5 @@ This software serves as a **portfolio demonstration** of high-level software eng
 While it utilizes industry-standard algorithms (NIST P-256, AES-GCM) implemented via the native Web Crypto API, it is recommended to conduct a full security audit before deploying in high-risk environments.
 
 ---
+**© 2026 ZeroTrace Systems.**  
+*Architected for Privacy.*

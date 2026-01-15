@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-zerotrace-dark: #0f172a;
+  --color-zerotrace-accent: #38bdf8;
+  --color-zerotrace-glass: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-white overflow-hidden;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@utility glass-panel {
+  @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+@utility custom-scrollbar {
+  &::-webkit-scrollbar {
+    @apply w-1.5;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+  }
+}
+
+/* Animations and effects */
+.glow-effect {
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+.cyber-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-border::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #38bdf8, transparent);
+  animation: cyber-line 3s infinite;
+}
+
+@keyframes cyber-line {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
